@@ -1,38 +1,54 @@
-<h1>Cats!</h1>
 
-<h2>Cats that are not sleepy!</h2>
+    <div class="row">
+    <div id="addBurger" class="col-md-12 text-center"><input id="burgerInput" placeholder="enter burger here"></div>
+  </div>
 
-<ul>
+  <div class="row">
+    <div class="col-md-12 text-center" style="padding: 0.5%"><button id="createBurger">Add burger</button></div>
+  </div>
+  <div class="row">
+    <div class="col-md-6  text-center" >
+      <h3>Burgers</h3>
+      <ul style="list-style-type: none">
   {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
+    {{#unless devoured}}
+    <div class="row">
+    <div class="col-md-8  text-center" > {{> cats/cat-block}}</div>
+     <div class="col-md-4  text-center" ><button id={{id}}>Devour it!</button></div> 
+      </div>
     {{/unless}}
   {{/each}}
 </ul>
 
-<h2>Cats that are sleepy!</h2>
 
-<ul>
+    </div>
+    <div class="col-md-6  text-center" >
+      <h3>Devoured Burgers</h3>
+      <ul style="list-style-type: none">
   {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
+    {{#if devoured}}
+    <div class="row">
+    <div class="col-md-8  text-center" > {{> cats/cat-block}}</div>
+     <div class="col-md-4  text-center" ></div> 
+      </div>
     {{/if}}
   {{/each}}
 </ul>
 
-<h2>Add a Cat</h2>
-<form class="create-form">
 
-  <div class="form-group">
-    <label for="ca">Cat Name:</label>
-    <input type="text" id="ca" name="name">
+
+    </div>
   </div>
+</div>
 
-  <div class="form-group">
-    <label for="sleepy">Sleepy?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Sleepy!<br>
-    <input type="radio" name="sleepy" value="0"> Awake
-  </div>
 
-  <button type="submit">Add Cat</button>
-</form>
+
+
+
+
+
+
+
+
+
+
