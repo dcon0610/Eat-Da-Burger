@@ -2,7 +2,7 @@
 var connection = require("../config/connection.js");
 
 var orm = {
-  all: function(cb) {
+  selectAll: function(cb) {
     var queryString = "SELECT * FROM burgers ";
     connection.query(queryString, function(err, result) {
       if (err) {
@@ -13,7 +13,7 @@ var orm = {
   },
 
   
-  create: function( vals, cb) {
+  insertOne: function( vals, cb) {
     var queryString = "INSERT INTO burgers (name, devoured) Values (?)";
  
 
@@ -27,7 +27,7 @@ var orm = {
       cb(result);
     });
   },
-  devour: function(id, cb) {
+  updateOne: function(id, cb) {
     var queryString = "UPDATE burgers set devoured = 1 where id= ?" 
 
     connection.query(queryString, id,  function(err, result) {
@@ -40,5 +40,4 @@ var orm = {
   }
 };
 
-// Export the orm object for the model (cat.js).
 module.exports = orm;

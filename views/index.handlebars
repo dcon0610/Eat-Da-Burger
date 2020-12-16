@@ -10,11 +10,12 @@
     <div class="col-md-6  text-center" >
       <h3>Burgers</h3>
       <ul style="list-style-type: none">
-  {{#each cats}}
+  {{#each burgers}}
     {{#unless devoured}}
     <div class="row">
-    <div class="col-md-8  text-center" > {{> cats/cat-block}}</div>
-     <div class="col-md-4  text-center" ><button id={{id}}>Devour it!</button></div> 
+    <div class="col-md-8  align-middle" > {{> burgers/burger-block}}</div>
+     <div class="col-md-2 align-middle" ><button class="btn" id={{id}}>Devour it!</button></div> 
+     <div class="col-md-2" > </div>
       </div>
     {{/unless}}
   {{/each}}
@@ -25,10 +26,10 @@
     <div class="col-md-6  text-center" >
       <h3>Devoured Burgers</h3>
       <ul style="list-style-type: none">
-  {{#each cats}}
+  {{#each burgers}}
     {{#if devoured}}
     <div class="row">
-    <div class="col-md-8  text-center" > {{> cats/cat-block}}</div>
+    <div class="col-md-8  text-center" > {{> burgers/burger-block}}</div>
      <div class="col-md-4  text-center" ></div> 
       </div>
     {{/if}}
