@@ -1,3 +1,34 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@dcon0610 
+dcon0610
+/
+Eat-Da-Burger
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+Settings
+Eat-Da-Burger/.gitignore
+@dcon0610
+dcon0610 Initial commit
+Latest commit a08445c 28 minutes ago
+ History
+ 1 contributor
+104 lines (76 sloc)  1.57 KB
+  
 # Logs
 logs
 *.log
@@ -102,3 +133,15 @@ dist
 
 # TernJS port file
 .tern-port
+© 2020 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
