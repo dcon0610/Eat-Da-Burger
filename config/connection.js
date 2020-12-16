@@ -13,7 +13,7 @@ connection = mysql.createConnection({
   password: "Cwoodfc2010!",
   database: "cat_db"
 });
-
+}
 // Make connection.
 connection.connect(function(err) {
   if (err) {
